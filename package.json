@@ -19,6 +19,7 @@
   "scripts": {
     "generate": "peggy --format umd src/parse-format.peggy",
     "build": "npm run generate && npx tsc -d && npx webpack",
+    "prepare": "npm run build",
     "test": "npm run build && jest",
     "pre-release": "node scripts/readme-global-urls.js && node scripts/freeze-readme.js && node scripts/check-tag.js"
   },
